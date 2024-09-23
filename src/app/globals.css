@@ -6,6 +6,7 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+	--tw-gradient-stops : #1bc245, #d81818;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,9 +18,11 @@
 }
 
 body {
-	background: #1c095b;
-	color: white;
-	width: screen;
+	/* background: #1c095b; */
+	/* height: screen; */
+	color: black;
+	/* width: screen; */
+	height: 200vh;
 }
 *{
 	margin: 0;
