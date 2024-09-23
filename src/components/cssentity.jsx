@@ -164,8 +164,8 @@ const CssEntity = () => {
 					className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
 					onClick={() =>
 						handleViewCodeClick(
-							"BubbleLeftToRight.html",
-							"BubbleLeftToRight.css"
+							"bubbleLeftToRight.html",
+							"bubbleLeftToRight.css"
 						)
 					}
 				>
