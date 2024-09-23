@@ -16,8 +16,10 @@ const AboutPage = () => {
 					</div>
 					<div className="md:w-1/2">
 						<Image
-							src="./dfd.jpg"
+							src="/dfd.jpg"
 							alt="About us illustration"
+							width={800}
+							height={600}
 							className="w-full h-auto rounded-lg shadow-lg"
 						/>
 					</div>
@@ -48,6 +50,8 @@ const AboutPage = () => {
 						<Image
 							src="/profile-picture.jpg"
 							alt="Gyan Pratap Singh"
+              width={800}
+							height={600}
 							className="rounded-full mx-auto w-48 h-48 object-cover shadow-lg"
 						/>
 					</div>
@@ -99,6 +103,8 @@ const AboutPage = () => {
 							<Image
 								src="/path/to/team-member.jpg"
 								alt="Team member"
+                width={800}
+							height={600}
 								className="w-32 h-32 mx-auto rounded-full mb-4"
 							/>
 							<h3 className="text-xl font-semibold">John Doe</h3>
@@ -110,6 +116,8 @@ const AboutPage = () => {
 							<Image
 								src="/path/to/team-member2.jpg"
 								alt="Team member"
+                width={800}
+							height={600}
 								className="w-32 h-32 mx-auto rounded-full mb-4"
 							/>
 							<h3 className="text-xl font-semibold">Jane Smith</h3>
@@ -120,6 +128,8 @@ const AboutPage = () => {
 							<Image
 								src="/path/to/team-member3.jpg"
 								alt="Team member"
+                width={800}
+							height={600}
 								className="w-32 h-32 mx-auto rounded-full mb-4"
 							/>
 							<h3 className="text-xl font-semibold">Emily Johnson</h3>
