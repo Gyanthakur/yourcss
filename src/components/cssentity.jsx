@@ -7,38 +7,58 @@ import { Copy } from "phosphor-react";
 // Modal component to display both HTML and CSS code with copy functionality
 const CodeModal = ({ htmlCode, cssCode, onClose, onCopyHtml, onCopyCss }) => {
 	return (
-		// <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 overflow-y-auto z-50">
-		// 	<div className="bg-white p-6 rounded-lg w-2/3 relative">
+		
+
+		// <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+		// 	<div className="bg-white p-6 rounded-lg w-2/3 relative flex flex-col h-3/4">
 		// 		<h2 className="text-xl mb-4">Code Viewer:</h2>
 
-		// 		{/* Display HTML Code */}
-		// 		<h3 className="text-lg mb-2">HTML Code:</h3>
-		// 		<pre className="bg-gray-100 p-4 rounded overflow-auto max-h-64 mb-4">
-		// 			{htmlCode}
-		// 		</pre>
+		// 		<div className="flex-1 overflow-y-auto custom-scrollbar">
+		// 			{/* Display HTML Code */}
+		// 			<div className="relative">
+		// 				<h3 className="text-lg mb-2 font-bold">HTML Code:</h3>
+		// 				<button
+		// 					className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
+		// 					onClick={onCopyHtml}
+		// 				>
+		// 					<Copy size={25} />
+		// 				</button>
+		// 				<pre className="bg-gray-100 p-4 rounded overflow-auto mb-4">
+		// 					{htmlCode}
+		// 				</pre>
+		// 			</div>
 
-		// 		{/* Display CSS Code */}
-		// 		<h3 className="text-lg mb-2">CSS Code:</h3>
-		// 		<pre className="bg-gray-100 p-4 rounded overflow-auto max-h-64">
-		// 			{cssCode}
-		// 		</pre>
+		// 			{/* Display CSS Code */}
+		// 			<div className="relative">
+		// 				<h3 className="text-lg mb-2 font-bold">CSS Code:</h3>
+		// 				<button
+		// 					className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
+		// 					onClick={onCopyCss}
+		// 				>
+		// 					<Copy size={25} />
+		// 				</button>
+		// 				<pre className="bg-gray-100 p-4 rounded overflow-auto">
+		// 					{cssCode}
+		// 				</pre>
+		// 			</div>
+		// 		</div>
 
 		// 		{/* Copy and Close Buttons */}
 		// 		<div className="mt-4 flex justify-between">
 		// 			<button
-		// 				className="bg-blue-500 text-white px-4 py-2 rounded"
+		// 				className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
 		// 				onClick={onCopyHtml}
 		// 			>
 		// 				Copy HTML Code
 		// 			</button>
 		// 			<button
-		// 				className="bg-blue-500 text-white px-4 py-2 rounded"
+		// 				className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
 		// 				onClick={onCopyCss}
 		// 			>
 		// 				Copy CSS Code
 		// 			</button>
 		// 			<button
-		// 				className="bg-red-500 text-white px-4 py-2 rounded"
+		// 				className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 "
 		// 				onClick={onClose}
 		// 			>
 		// 				Close
@@ -46,64 +66,64 @@ const CodeModal = ({ htmlCode, cssCode, onClose, onCopyHtml, onCopyCss }) => {
 		// 		</div>
 		// 	</div>
 		// </div>
-
 		<div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-			<div className="bg-white p-6 rounded-lg w-2/3 relative flex flex-col h-3/4">
-				<h2 className="text-xl mb-4">Code Viewer:</h2>
+  <div className="bg-white p-6 rounded-lg w-full max-w-4xl relative flex flex-col h-3/4">
+    <h2 className="text-xl mb-4">Code Viewer:</h2>
 
-				<div className="flex-1 overflow-y-auto custom-scrollbar">
-					{/* Display HTML Code */}
-					<div className="relative">
-						<h3 className="text-lg mb-2 font-bold">HTML Code:</h3>
-						<button
-							className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
-							onClick={onCopyHtml}
-						>
-							<Copy size={25} />
-						</button>
-						<pre className="bg-gray-100 p-4 rounded overflow-auto mb-4">
-							{htmlCode}
-						</pre>
-					</div>
+    <div className="flex-1 overflow-y-auto custom-scrollbar">
+      {/* Display HTML Code */}
+      <div className="relative">
+        <h3 className="text-lg mb-2 font-bold">HTML Code:</h3>
+        <button
+          className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
+          onClick={onCopyHtml}
+        >
+          <Copy size={25} />
+        </button>
+        <pre className="bg-gray-100 p-4 rounded overflow-auto mb-4">
+          {htmlCode}
+        </pre>
+      </div>
 
-					{/* Display CSS Code */}
-					<div className="relative">
-						<h3 className="text-lg mb-2 font-bold">CSS Code:</h3>
-						<button
-							className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
-							onClick={onCopyCss}
-						>
-							<Copy size={25} />
-						</button>
-						<pre className="bg-gray-100 p-4 rounded overflow-auto">
-							{cssCode}
-						</pre>
-					</div>
-				</div>
+      {/* Display CSS Code */}
+      <div className="relative">
+        <h3 className="text-lg mb-2 font-bold">CSS Code:</h3>
+        <button
+          className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
+          onClick={onCopyCss}
+        >
+          <Copy size={25} />
+        </button>
+        <pre className="bg-gray-100 p-4 rounded overflow-auto">
+          {cssCode}
+        </pre>
+      </div>
+    </div>
 
-				{/* Copy and Close Buttons */}
-				<div className="mt-4 flex justify-between">
-					<button
-						className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-						onClick={onCopyHtml}
-					>
-						Copy HTML Code
-					</button>
-					<button
-						className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-						onClick={onCopyCss}
-					>
-						Copy CSS Code
-					</button>
-					<button
-						className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 "
-						onClick={onClose}
-					>
-						Close
-					</button>
-				</div>
-			</div>
-		</div>
+    {/* Copy and Close Buttons */}
+    <div className="mt-4 flex flex-col sm:flex-row gap-2 justify-between">
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 w-full sm:w-auto"
+        onClick={onCopyHtml}
+      >
+        Copy HTML Code
+      </button>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 w-full sm:w-auto"
+        onClick={onCopyCss}
+      >
+        Copy CSS Code
+      </button>
+      <button
+        className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 w-full sm:w-auto"
+        onClick={onClose}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
 	);
 };
 
