@@ -266,7 +266,7 @@ const CssEntity = () => {
 			{/* component end here  */}
 			{/* component start here  */}
 			<div className="ml-16 m-10 hover:bg-zinc-400 w-40 h-40 flex justify-center items-center relative group">
-				<div class={style.fillRact}>
+				<div className={style.fillRact}>
 					<div></div>
 					
 				</div>

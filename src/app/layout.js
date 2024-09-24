@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 				<div>
 					<Header />
 					{children}
-					<Meteors number={200} />
+					
 				</div>
 			</body>
 		</html>
