@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
 import { Meteors } from "@/components/ui/meteors";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,11 +15,9 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<div>
-					<Header />
-					{children}
-					
-				</div>
+				<Header />
+				{children}
+				<Footer />
 			</body>
 		</html>
 	);

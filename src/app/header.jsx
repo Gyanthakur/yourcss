@@ -19,6 +19,7 @@ const Header = () => {
 
 					{/* Desktop Menu */}
 					<div className="hidden md:flex space-x-8 text-lg">
+						<a href="/" className="hover:text-yellow-400 transition">Home</a>
 						<a href="/about" className="hover:text-yellow-400 transition">About</a>
 						<a href="/services" className="hover:text-yellow-400 transition">Services</a>
 						<a href="/contact" className="hover:text-yellow-400 transition">Contact</a>
@@ -38,6 +39,7 @@ const Header = () => {
 				{/* Mobile Menu */}
 				{menuOpen && (
 					<div className="md:hidden flex flex-col items-center bg-blue-800 py-4 space-y-4">
+						<a href="/" className="hover:text-yellow-400 transition">Home</a>
 						<a href="/about" className="hover:text-yellow-400 transition">About</a>
 						<a href="/services" className="hover:text-yellow-400 transition">Services</a>
 						<a href="/contact" className="hover:text-yellow-400 transition">Contact</a>
@@ -46,7 +48,7 @@ const Header = () => {
 			</header>
 
 			{/* Push content down to prevent it from being overlapped by the header */}
-			<div className="mt-20"></div>
+			<div className="mt-16"></div>
 
 			{/* Rest of your page content */}
 			{/* <div className="p-6">
