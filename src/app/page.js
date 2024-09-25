@@ -5,7 +5,7 @@ import { Meteors } from "@/components/ui/meteors";
 export default function Home() {
 	return (
 		<>
-			<div className="">
+			<div>
 				<LampDemo />
 				<h1 className=" flex justify-center items-center pl-6 pr-6 text-5xl mt-3 font-bold">
 					Beautifully simple click-to-copy CSS effects
@@ -19,7 +19,7 @@ export default function Home() {
 			</div>
 
 			<CssEntity />
-			<Meteors number={20} />
+			{/* <Meteors number={20} /> */}
 		</>
 	);
 }

@@ -7,63 +7,7 @@ import { Copy } from "phosphor-react";
 // Modal component to display both HTML and CSS code with copy functionality
 const CodeModal = ({ htmlCode, cssCode, onClose, onCopyHtml, onCopyCss }) => {
 	return (
-		// <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-		// 	<div className="bg-white p-6 rounded-lg w-2/3 relative flex flex-col h-3/4">
-		// 		<h2 className="text-xl mb-4">Code Viewer:</h2>
-
-		// 		<div className="flex-1 overflow-y-auto custom-scrollbar">
-		// 			{/* Display HTML Code */}
-		// 			<div className="relative">
-		// 				<h3 className="text-lg mb-2 font-bold">HTML Code:</h3>
-		// 				<button
-		// 					className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
-		// 					onClick={onCopyHtml}
-		// 				>
-		// 					<Copy size={25} />
-		// 				</button>
-		// 				<pre className="bg-gray-100 p-4 rounded overflow-auto mb-4">
-		// 					{htmlCode}
-		// 				</pre>
-		// 			</div>
-
-		// 			{/* Display CSS Code */}
-		// 			<div className="relative">
-		// 				<h3 className="text-lg mb-2 font-bold">CSS Code:</h3>
-		// 				<button
-		// 					className="absolute top-0 right-0 m-2 text-blue-500 hover:text-blue-700"
-		// 					onClick={onCopyCss}
-		// 				>
-		// 					<Copy size={25} />
-		// 				</button>
-		// 				<pre className="bg-gray-100 p-4 rounded overflow-auto">
-		// 					{cssCode}
-		// 				</pre>
-		// 			</div>
-		// 		</div>
-
-		// 		{/* Copy and Close Buttons */}
-		// 		<div className="mt-4 flex justify-between">
-		// 			<button
-		// 				className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-		// 				onClick={onCopyHtml}
-		// 			>
-		// 				Copy HTML Code
-		// 			</button>
-		// 			<button
-		// 				className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-		// 				onClick={onCopyCss}
-		// 			>
-		// 				Copy CSS Code
-		// 			</button>
-		// 			<button
-		// 				className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 "
-		// 				onClick={onClose}
-		// 			>
-		// 				Close
-		// 			</button>
-		// 		</div>
-		// 	</div>
-		// </div>
+		
 		<div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
 			<div className="bg-white p-6 rounded-lg w-full max-w-4xl relative flex flex-col h-3/4">
 				<h2 className="text-xl mb-4">Code Viewer:</h2>
@@ -243,7 +187,7 @@ const CssEntity = () => {
 
 			{/* component start here  */}
 			<div className="ml-16 m-10 hover:bg-zinc-400 w-40 h-40 flex justify-center items-center relative group">
-				<div class={style.balls}>
+				<div className={style.balls}>
 					<div></div>
 					<div></div>
 					<div></div>
@@ -275,7 +219,7 @@ const CssEntity = () => {
 			{/* component end here  */}
 			{/* component start here  */}
 			<div className="ml-16 m-10 hover:bg-sky-500 w-40 h-40 flex justify-center items-center relative group">
-				<div class={style.neon}>
+				<div className={style.neon}>
 					<button>...</button>
 				</div>
 
@@ -327,7 +271,7 @@ const CssEntity = () => {
 			{/* component end here  */}
 			{/* component start here  */}
 			<div className="ml-16 m-10 hover:bg-sky-400 w-40 h-40 flex justify-center items-center relative group">
-				<div class={style.glassCard}>
+				<div className={style.glassCard}>
 					<h2>Glassmorphism Card</h2>
 					<p>Beautiful transparent, frosted glass effect.</p>
 				</div>
@@ -346,9 +290,9 @@ const CssEntity = () => {
 
 			{/* component start here  */}
 			<div className="ml-16 m-10 hover:bg-zinc-400 w-40 h-40 flex justify-center items-center relative group">
-				<div class={style.searchContainer}>
-					<input type="text" class={style.searchBar} placeholder="Search..." />
-					<div class={style.searchBtn}>🔍</div>
+				<div className={style.searchContainer}>
+					<input type="text" className={style.searchBar} placeholder="Search..." />
+					<div className={style.searchBtn}>🔍</div>
 				</div>
 
 				<div
