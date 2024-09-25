@@ -1,8 +1,6 @@
+"use client";
 
-
-"use client"
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -19,10 +17,18 @@ const Header = () => {
 
 					{/* Desktop Menu */}
 					<div className="hidden md:flex space-x-8 text-lg">
-						<a href="/" className="hover:text-yellow-400 transition">Home</a>
-						<a href="/about" className="hover:text-yellow-400 transition">About</a>
-						<a href="/services" className="hover:text-yellow-400 transition">Services</a>
-						<a href="/contact" className="hover:text-yellow-400 transition">Contact</a>
+						<a href="/" className="hover:text-yellow-400 transition">
+							Home
+						</a>
+						<a href="/about" className="hover:text-yellow-400 transition">
+							About
+						</a>
+						<a href="/services" className="hover:text-yellow-400 transition">
+							Services
+						</a>
+						<a href="/contact" className="hover:text-yellow-400 transition">
+							Contact
+						</a>
 					</div>
 
 					{/* Mobile Menu Toggle */}
@@ -31,7 +37,7 @@ const Header = () => {
 							onClick={() => setMenuOpen(!menuOpen)}
 							className="text-2xl focus:outline-none"
 						>
-							{menuOpen ? '✕' : '☰'}
+							{menuOpen ? "✕" : "☰"}
 						</button>
 					</div>
 				</nav>
@@ -39,10 +45,18 @@ const Header = () => {
 				{/* Mobile Menu */}
 				{menuOpen && (
 					<div className="md:hidden flex flex-col items-center bg-blue-800 py-4 space-y-4">
-						<a href="/" className="hover:text-yellow-400 transition">Home</a>
-						<a href="/about" className="hover:text-yellow-400 transition">About</a>
-						<a href="/services" className="hover:text-yellow-400 transition">Services</a>
-						<a href="/contact" className="hover:text-yellow-400 transition">Contact</a>
+						<a href="/" className="hover:text-yellow-400 transition">
+							Home
+						</a>
+						<a href="/about" className="hover:text-yellow-400 transition">
+							About
+						</a>
+						<a href="/services" className="hover:text-yellow-400 transition">
+							Services
+						</a>
+						<a href="/contact" className="hover:text-yellow-400 transition">
+							Contact
+						</a>
 					</div>
 				)}
 			</header>
@@ -50,8 +64,8 @@ const Header = () => {
 			{/* Push content down to prevent it from being overlapped by the header */}
 			<div className="mt-20"></div>
 
-			{/* Rest of your page content */}
-			{/* <div className="p-6">
+			{/* Rest of your page content
+			<div className="p-6">
 				<h1>Welcome to My Website</h1>
 				<p>Here is some content...</p>
 			</div> */}
