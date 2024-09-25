@@ -18,12 +18,17 @@
 }
 
 body {
-	/* background: #1c095b; */
+	/* background: #df919a; */
 	/* height: screen; */
 	color: black;
-	width: fit-content;
+	width: screen;
 }
 *{
 	margin: 0;
 	padding: 0;
+}
+
+a:hover
+{
+	color: #1bc245;
 }

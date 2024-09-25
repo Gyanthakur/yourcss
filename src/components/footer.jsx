@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-blue-900 text-gray-200 py-10">
       <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        {/* About Section */}
+        
         <div>
           <h3 className="text-white text-xl font-bold mb-4">About Us</h3>
           <p className="text-gray-400 text-sm">
@@ -15,7 +15,7 @@ const Footer = () => {
           </p>
         </div>
         
-        {/* Quick Links Section */}
+       
         <div>
           <h3 className="text-white text-xl font-bold mb-4">Quick Links</h3>
           <ul className="text-gray-400 text-sm">
@@ -37,7 +37,6 @@ const Footer = () => {
           </ul>
         </div>
         
-        {/* Social Media Links Section */}
         <div className="flex flex-col items-center sm:items-start">
           <h3 className="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div className="flex space-x-4">
@@ -70,7 +69,6 @@ const Footer = () => {
         </div>
       </div>
       
-      {/* Footer Bottom */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center">
         <p className="text-sm text-gray-500">
           © {new Date().getFullYear()} Gyan Pratap Singh. All rights reserved.
