@@ -2,7 +2,7 @@ import { Meteors } from "@/components/ui/meteors";
 
 const ContactPage = () => {
 	return (
-		<div className="flex justify-center items-center min-h-screen mt-20 mb-5">
+		<div className="flex justify-center items-center min-h-screen mb-5">
 			<Meteors number={50} />
 			<form className="bg-zinc-500 flex flex-col justify-start p-6 rounded-lg w-full max-w-lg">
 				<label htmlFor="firstName" className="text-white mb-2">

@@ -1,5 +1,5 @@
 "use client"
-import { TwitterLogo, GithubLogo, LinkedinLogo } from "phosphor-react";
+import { TwitterLogo, GithubLogo, LinkedinLogo, GitBranch, GitMerge, GitPullRequest } from "phosphor-react";
 
 const Footer = () => {
   return (
@@ -57,6 +57,7 @@ const Footer = () => {
             >
               <GithubLogo size={32} className=" hover:text-red-500"/>
             </a>
+            
             <a
               href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/"
               target="_blank"

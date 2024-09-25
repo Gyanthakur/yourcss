@@ -48,7 +48,7 @@ const Header = () => {
 			</header>
 
 			{/* Push content down to prevent it from being overlapped by the header */}
-			<div className="mt-16"></div>
+			<div className="mt-20"></div>
 
 			{/* Rest of your page content */}
 			{/* <div className="p-6">
