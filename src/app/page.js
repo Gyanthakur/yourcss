@@ -1,4 +1,5 @@
-import CssEntity from "@/components/cssentity";
+import CssEntity from "@/components/CssEntity/cssentity";
+import Form from "@/components/FormForUser/form";
 import { LampDemo } from "@/components/ui/lamp";
 import { Meteors } from "@/components/ui/meteors";
 
@@ -19,6 +20,7 @@ export default function Home() {
 			</div>
 
 			<CssEntity />
+			<Form/>
 			{/* <Meteors number={20} /> */}
 		</>
 	);
