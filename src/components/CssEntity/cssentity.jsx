@@ -7,7 +7,6 @@ import { Copy } from "phosphor-react";
 // Modal component to display both HTML and CSS code with copy functionality
 const CodeModal = ({ htmlCode, cssCode, onClose, onCopyHtml, onCopyCss }) => {
 	return (
-		
 		<div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
 			<div className="bg-white p-6 rounded-lg w-full max-w-4xl relative flex flex-col h-3/4">
 				<h2 className="text-xl mb-4">Code Viewer:</h2>
@@ -284,20 +283,96 @@ const CssEntity = () => {
 				</div>
 			</div>
 
-		
-			
-
-
 			{/* component start here  */}
 			<div className="ml-16 m-10 hover:bg-zinc-400 w-40 h-40 flex justify-center items-center relative group">
 				<div className={style.searchContainer}>
-					<input type="text" className={style.searchBar} placeholder="Search..." />
+					<input
+						type="text"
+						className={style.searchBar}
+						placeholder="Search..."
+					/>
 					<div className={style.searchBtn}>🔍</div>
 				</div>
 
 				<div
 					className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
 					onClick={() => handleViewCodeClick("searchBar.html", "searchBar.css")}
+				>
+					<Copy size={25} />
+				</div>
+			</div>
+
+			{/* component end here  */}
+			{/* component start here  */}
+			<div className="ml-16 m-10 w-36 h-40 hover:bg-zinc-600 flex justify-center items-center relative group">
+				<button className={style.neuButton}>Click Me</button>
+
+				<div
+					className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
+					onClick={() => handleViewCodeClick("neuButton.html", "neuButton.css")}
+				>
+					<Copy size={25} />
+				</div>
+			</div>
+
+			{/* component end here  */}
+			{/* component start here  */}
+			<div className="ml-16 m-10 w-36 h-40 hover:bg-zinc-600 flex justify-center items-center relative group">
+				<a href="#" class={style.animatedLink}>
+					Hover Me
+				</a>
+
+				<div
+					className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
+					onClick={() =>
+						handleViewCodeClick("animatedLink.html", "animatedLink.css")
+					}
+				>
+					<Copy size={25} />
+				</div>
+			</div>
+
+			{/* component end here  */}
+			{/* component start here  */}
+			<div className="ml-16 m-10 w-36 h-40 flex justify-center items-center relative group">
+				<div className={style.card3d}>
+					<div className={style.cardcontent}>
+						<h3>Hover me</h3>
+						
+						<a href="#" className={style.btn3d}>
+							Learn More
+						</a>
+					</div>
+				</div>
+
+				<div
+					className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
+					onClick={() =>
+						handleViewCodeClick("card3d.html", "card3d.css")
+					}
+				>
+					<Copy size={25} />
+				</div>
+			</div>
+
+			{/* component end here  */}
+
+			{/* component start here  */}
+			<div className="ml-16 m-10 h w-40 h-40 flex justify-center items-center relative group">
+				<div className={style.card}>
+					{/* <img src="image.jpg" alt="Card Image" class="card-img"> */}
+					<img src="./image.webp" alt="card image" className={style.cardImg} />
+					<div className={style.cardContent}>
+						<h3>Card Title</h3>
+						<a href="#" className={style.cardBtn}>
+							Read More
+						</a>
+					</div>
+				</div>
+
+				<div
+					className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
+					onClick={() => handleViewCodeClick("card.html", "card.css")}
 				>
 					<Copy size={25} />
 				</div>
