@@ -364,7 +364,7 @@ const CssEntity = () => {
 					<img src="./image.webp" alt="card image" className={style.cardImg} />
 					<div className={style.cardContent}>
 						<h3>Card Title</h3>
-						<a href="#" className={style.cardBtn}>
+						<a href="" className={style.cardBtn}>
 							Read More
 						</a>
 					</div>

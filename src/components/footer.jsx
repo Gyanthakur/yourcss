@@ -3,7 +3,7 @@ import { TwitterLogo, GithubLogo, LinkedinLogo, GitBranch, GitMerge, GitPullRequ
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-gray-200 py-10">
+    <footer className="bg-blue-900 text-gray-200 py-10 rounded-md">
       <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
         

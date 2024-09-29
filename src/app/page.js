@@ -3,11 +3,12 @@ import Form from "@/components/FormForUser/form";
 import { LampDemo } from "@/components/ui/lamp";
 import { Meteors } from "@/components/ui/meteors";
 
+
 export default function Home() {
 	return (
 		<>
-			<div>
-				<LampDemo />
+			<div className="">
+				<LampDemo className="mt-0" />
 				<h1 className=" flex justify-center items-center pl-6 pr-6 text-5xl mt-3 font-bold">
 					Beautifully simple click-to-copy CSS effects
 				</h1>
