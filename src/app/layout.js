@@ -3,6 +3,14 @@ import "./globals.css";
 import Header from "./header";
 import { Meteors } from "@/components/ui/meteors";
 import Footer from "@/components/footer";
+// import { ClerkProvider } from "@clerk/nextjs/dist/types/components.server";
+import {
+	ClerkProvider,
+	SignInButton,
+	SignedIn,
+	SignedOut,
+	UserButton
+  } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,12 +21,28 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>
-				<Header />
-				{children}
-				<Footer />
-			</body>
-		</html>
+		// <html lang="en">
+		// 	<body className={inter.className}>
+		// 		<Header />
+		// 		{children}
+		// 		<Footer />
+		// 	</body>
+		// </html>
+
+		<ClerkProvider>
+      <html lang="en">
+        <body>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+		  <Header />
+          {children}
+		  <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
 	);
 }
