@@ -1,6 +1,6 @@
 "use client";
 
-import { SignedOut,SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedOut, SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -16,26 +16,25 @@ const Header = () => {
 
 					{/*for  Desktop Menu */}
 
-					
 					<div className="hidden md:flex space-x-8 text-lg">
-					<SignedOut>
-						<SignInButton />
-					</SignedOut>
-					<SignedIn>
-						<UserButton/>
-						<a href="/" className="hover:text-yellow-400 transition">
-							Home
-						</a>
-						<a href="/about" className="hover:text-yellow-400 transition">
-							About
-						</a>
-						<a href="/services" className="hover:text-yellow-400 transition">
-							Services
-						</a>
-						<a href="/contact" className="hover:text-yellow-400 transition">
-							Contact
-						</a>
-					</SignedIn>
+						<SignedOut>
+							<SignInButton />
+						</SignedOut>
+						<SignedIn>
+							<UserButton />
+							<a href="/" className="hover:text-yellow-400 transition">
+								Home
+							</a>
+							<a href="/about" className="hover:text-yellow-400 transition">
+								About
+							</a>
+							<a href="/services" className="hover:text-yellow-400 transition">
+								Services
+							</a>
+							<a href="/contact" className="hover:text-yellow-400 transition">
+								Contact
+							</a>
+						</SignedIn>
 					</div>
 
 					{/* for Mobile */}
@@ -52,18 +51,24 @@ const Header = () => {
 				{/* for Mobile Menu */}
 				{menuOpen && (
 					<div className="md:hidden flex flex-col items-center bg-blue-800 py-4 space-y-4">
-						<a href="/" className="hover:text-yellow-400 transition">
-							Home
-						</a>
-						<a href="/about" className="hover:text-yellow-400 transition">
-							About
-						</a>
-						<a href="/services" className="hover:text-yellow-400 transition">
-							Services
-						</a>
-						<a href="/contact" className="hover:text-yellow-400 transition">
-							Contact
-						</a>
+						<SignedOut>
+							<SignInButton />
+						</SignedOut>
+						<SignedIn>
+							<UserButton />
+							<a href="/" className="hover:text-yellow-400 transition">
+								Home
+							</a>
+							<a href="/about" className="hover:text-yellow-400 transition">
+								About
+							</a>
+							<a href="/services" className="hover:text-yellow-400 transition">
+								Services
+							</a>
+							<a href="/contact" className="hover:text-yellow-400 transition">
+								Contact
+							</a>
+						</SignedIn>
 					</div>
 				)}
 			</header>
