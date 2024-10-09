@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import style from "./form.Module.css";
 import style from "./form.module.css";
 import { Copy } from "phosphor-react";
@@ -69,6 +69,7 @@ const Form = () => {
 	const [showCodeModal, setShowCodeModal] = useState(false);
 	const [htmlCodeToShow, setHtmlCodeToShow] = useState("");
 	const [cssCodeToShow, setCssCodeToShow] = useState("");
+	const [isDarkMode, setIsDarkMode] = useState(false);
 
 	// Function to fetch both CSS and HTML file content and open the modal
 	const handleViewCodeClick = async (htmlFileName, cssFileName) => {
@@ -100,10 +101,38 @@ const Form = () => {
 			alert("CSS Code copied to clipboard!");
 		});
 	};
+	
+
+	// Load theme from local storage or default to system preference
+	useEffect(() => {
+		const theme = localStorage.getItem("theme");
+		if (
+			theme === "dark" ||
+			(!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+		) {
+			setIsDarkMode(true);
+			document.documentElement.classList.add("dark");
+		} else {
+			setIsDarkMode(false);
+			document.documentElement.classList.remove("dark");
+		}
+	}, []);
+
+	// Toggle theme and save preference to local storage
+	const toggleTheme = () => {
+		if (isDarkMode) {
+			document.documentElement.classList.remove("dark");
+			localStorage.setItem("theme", "light");
+		} else {
+			document.documentElement.classList.add("dark");
+			localStorage.setItem("theme", "dark");
+		}
+		setIsDarkMode(!isDarkMode);
+	};
 
 	return (
 		<div>
-			<div className="text-center p-4 bg-gray-100 rounded-lg shadow-md">
+			<div className="text-center p-4 bg-gray-100 rounded-lg shadow-md ">
 				<p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700">
 					You can easily use all the forms by copying the code. When you hover
 					over any form, a copy button will appear in the right corner, allowing
@@ -112,7 +141,7 @@ const Form = () => {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 bg-black rounded-md">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 rounded-md">
 				{showCodeModal && (
 					<CodeModal
 						htmlCode={htmlCodeToShow}
